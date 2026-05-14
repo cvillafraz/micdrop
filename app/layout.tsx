@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { Inter, Roboto_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { FarcasterMiniApp } from "@/components/farcaster-miniapp"
 import "./globals.css"
 
 const inter = Inter({
@@ -45,7 +44,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans ${inter.variable} ${robotoMono.variable} antialiased`}>
-        <FarcasterMiniApp />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
