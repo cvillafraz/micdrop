@@ -6,9 +6,6 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -17,6 +14,7 @@ const nextConfig = {
   },
   serverExternalPackages: ['@supabase/supabase-js'],
   outputFileTracingRoot: __dirname,
+  turbopack: {},
   webpack: (config) => {
     // Optimize large string serialization for audio processing
     config.cache = {
