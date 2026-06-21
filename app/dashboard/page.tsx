@@ -11,7 +11,6 @@ import {
   Play,
   BarChart3,
   Zap,
-  CreditCard,
 } from "lucide-react"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
@@ -124,16 +123,6 @@ export default function DashboardPage() {
                 <Link href="/performance">
                   <BarChart3 className="w-7 h-7" />
                   <span className="text-sm font-medium">View Performance</span>
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                className="h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-orange-100 to-rose-100 hover:from-orange-200 hover:to-rose-200 border-orange-200 text-orange-800 shadow-sm transition-all duration-200"
-                asChild
-              >
-                <Link href="/payments">
-                  <CreditCard className="w-7 h-7" />
-                  <span className="text-sm font-medium">Premium Plans</span>
                 </Link>
               </Button>
             </div>
